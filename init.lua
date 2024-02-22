@@ -4,6 +4,7 @@ require("config.keymaps")
 local vim = vim
 local Plug = vim.fn['plug#']
 
+-- Extensions
 vim.call('plug#begin')
 -- interface
 Plug 'vim-airline/vim-airline'
