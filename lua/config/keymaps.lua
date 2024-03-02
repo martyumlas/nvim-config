@@ -17,3 +17,8 @@ end
 vim.api.nvim_set_keymap('n', '<Leader>n', ':lua switch_to_next_buffer()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>p', ':lua switch_to_previous_buffer()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>q', ':lua close_buffer()<CR>', { noremap = true, silent = true })
+
+vim.cmd([[ 
+  nnoremap <C-S> :update<cr>
+  inoremap <C-S> <Esc>:update<cr>gi
+]])
