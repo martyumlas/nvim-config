@@ -12,7 +12,7 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
     emmet_language_server = function()
       require('lspconfig').emmet_language_server.setup({
-        filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
+        filetypes = { "eruby", "html", "javascript", "javascriptreact", "pug", "typescriptreact" },
         -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
         -- **Note:** only the options listed in the table are supported.
         init_options = {
@@ -39,6 +39,20 @@ require('mason-lspconfig').setup({
     end,
   },
 })
+
+local lspconfig = require('lspconfig')
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.cssls.setup {
+    capabilities = capabilities,
+    settings = {
+        css = {
+            validate = false -- disable CSS validation
+        }
+    }
+}
 
 local cmp = require('cmp')
 
