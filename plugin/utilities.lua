@@ -12,3 +12,8 @@ require('Comment').setup({
 
 require('gitsigns').setup()
 
+
+-- Auto save
+
+require('auto-save').setup()
+
