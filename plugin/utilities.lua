@@ -12,6 +12,9 @@ require('Comment').setup({
 
 require('gitsigns').setup()
 
+-- Git Blame
+
+vim.g.blamer_enabled = true
 
 -- Auto save
 

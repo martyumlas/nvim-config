@@ -27,6 +27,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'Pocco81/auto-save.nvim'
+Plug 'APZelos/blamer.nvim'
 -- LSP Support
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
@@ -35,6 +36,7 @@ Plug('VonHeikemen/lsp-zero.nvim', {['branch'] = 'v3.x'})
 -- Autocompletion
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-path'
 Plug 'L3MON4D3/LuaSnip'
 
 vim.call('plug#end')
